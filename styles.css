@@ -1,0 +1,113 @@
+:root {
+  --bg: #ffffff;
+  --fg: #1f2328;
+  --dim: #6a737d;
+  --accent: #C26263ee;
+  --rule: #e6e6e6;
+  --maxw: 820px;
+}
+
+html,
+body {
+  background: var(--bg);
+  color: var(--fg);
+  margin: 0;
+  font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas,
+    "Liberation Mono", monospace;
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 32px 18px 80px;
+}
+
+.prompt {
+  color: var(--dim);
+  margin-bottom: 8px;
+}
+.prompt.end {
+  margin-top: 28px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin: 0;
+}
+
+.rule {
+  border: none;
+  border-top: 2px solid var(--rule);
+  margin: 10px 0 22px;
+}
+
+section {
+  margin: 28px 0;
+}
+
+h2 {
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  color: var(--dim);
+  margin: 0 0 12px;
+}
+
+.jobs {
+  display: grid;
+  gap: 18px;
+}
+
+.job {
+  display: grid;
+  grid-template-columns: minmax(320px, 1fr) auto;
+  gap: 12px 24px;
+  align-items: start;
+}
+
+.left {
+  min-width: 0; /* allow wrap instead of overflow */
+}
+
+.right {
+  color: var(--dim);
+  white-space: nowrap;
+  text-align: right;
+}
+
+.desc {
+  margin: 8px 0 0;
+  color: var(--dim);
+}
+
+.left,
+.left * {
+  white-space: normal;
+  word-break: normal;
+  overflow-wrap: anywhere;
+}
+
+.center {
+  text-align: center;
+  color: var(--dim);
+  letter-spacing: 0.3em;
+  margin: 18px 0;
+}
+
+@media (max-width: 640px) {
+  .job {
+    grid-template-columns: 1fr;
+  }
+  .right {
+    text-align: left;
+  }
+}
